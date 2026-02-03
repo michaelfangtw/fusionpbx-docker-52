@@ -123,7 +123,7 @@ Once the container is running, access FusionPBX at:
 
 - **URL**: [http://localhost](http://localhost)
 - **Username**: `admin@localhost`
-- **vi **: `your_password`  * dont forget to change password *
+- **vi **: `password`  * dont forget to change password *
 
 ## 📁 Project Structure
 
@@ -152,7 +152,7 @@ fusionpbx-docker-dev/
 
 - **URL**: [http://localhost](http://localhost)
 - **Username**: `admin@localhost`
-- **Password**: `your_password`    * dont forget to change password *
+- **Password**: `password`    * dont forget to change password *
 
 ### 🗄️ Database (PostgreSQL)
 
@@ -160,7 +160,7 @@ fusionpbx-docker-dev/
 
 - **Host**: `localhost`
 - **User**: `fusionpbx`
-- **Password**: `your_password`  * don't forget to change your password *
+- **Password**: `password`  * don't forget to change your password *
 
 ## 🌐 Network Configuration
 
@@ -225,20 +225,20 @@ If you cannot log in to the web interface:
    http://localhost
    1.reset admin
      id=admin 
-     pass=your_password  * don't forget to change your password *
+     pass=password  * don't forget to change your password *
      domain:localhost
 
      postgresq
      db host:localhost
      port:5432
      id=fusionpbx
-     pass=your_password   * don't forget to change your password *
+     pass=password   * don't forget to change your password *
 
    ```
 
 4. **Use default credentials:**
    - **Username**: `admin`
-   - **Password**: `your_password` * don't forget to change your password *
+   - **Password**: `password` * don't forget to change your password *
 
 ### 🗄️ Database Issues
 
@@ -276,8 +276,9 @@ docker exec -it fusionpbx /bin/bash
 
 # Commit changes to create a new image
 TAG=5.2
-docker commit fusionpbx michaelfangtw/fusionpbx-docker-dev:$TAG
-docker push michaelfangtw/fujsionpbx-docker-dev:$TAG
+docker tag fusionpbx-docker:$TAG  michaelfangtw/fusionpbx-docker:$TAG
+docker login
+docker push michaelfangtw/fusionpbx-docker:$TAG
 ```
 
 #### View Container Logs
