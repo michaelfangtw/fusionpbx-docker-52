@@ -1,7 +1,8 @@
 services:
   pbx:
     # Use pre-built image from Docker Hub
-    image: michaelfangtw/fusionpbx-docker-dev:5.2
+    # fusionpbx 5.2 is old theme(5.4 is new theme)
+    image: michaelfangtw/fusionpbx-docker:5.2
 
     # Or build locally (uncomment to use)
     # build:

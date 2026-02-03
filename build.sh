@@ -1,4 +1,4 @@
-TAG=5.1
+TAG=5.2
 docker system prune -f
-docker build --no-cache  -t fusionpbx-docker-dev:$TAG .
+docker build --no-cache  -t fusionpbx-docker:$TAG .
 

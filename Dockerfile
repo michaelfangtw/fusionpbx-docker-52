@@ -20,8 +20,8 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y lsb-release git
 
 WORKDIR /usr/src
-#RUN git clone https://github.com/fusionpbx/fusionpbx-install.sh.git
-COPY ./src/fusionpbx-install.sh /usr/src/fusionpbx-install.sh
+WORKDIR /usr/src
+RUN git clone https://github.com/fusionpbx/fusionpbx-install.sh.git
 
 #change the working directory
 # make sure installer scripts are executable and run the installer
